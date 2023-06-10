@@ -1,0 +1,90 @@
+.container {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.banner-container {
+    background-image: url('../public/helmet-banner.jpg');
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
+    margin: 0;
+    padding: 0;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.banner-mask {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    background: rgb(5,10,12);
+    background: -moz-linear-gradient(360deg, rgba(5,10,12,1) 0%, rgba(5,10,12,1) 1%, rgba(5,10,12,0) 15%, rgba(5,10,12,0) 100%);
+    background: -webkit-linear-gradient(360deg, rgba(5,10,12,1) 0%, rgba(5,10,12,1) 1%, rgba(5,10,12,0) 15%, rgba(5,10,12,0) 100%);
+    background: linear-gradient(360deg, rgba(5,10,12,1) 0%, rgba(5,10,12,1) 1%, rgba(5,10,12,0) 15%, rgba(5,10,12,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#050a0c",endColorstr="#050a0c",GradientType=1);  
+}
+
+.banner-title {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.posts {
+    background-color: #050a0c;
+    color: #fff;
+    padding: 0 17% 50px 17%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 1em 2em;
+}
+
+.post-article {
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s
+}
+
+.post-article:hover {
+    top: -10px;
+}
+
+.test {
+    color: #fff;
+}
+
+@media (max-width: 840px) {
+
+    .posts {
+        padding: 0 5%;
+    }
+
+    .post-article {
+        grid-column: 1 / 4;
+    }
+
+}
+
+@media (max-width: 1350px) {
+
+    .posts {
+        padding: 0 10% 25px 10%;
+    }
+
+    .posts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .post-article {
+        grid-column: 1fr;
+    }
+
+}

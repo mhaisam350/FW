@@ -1,0 +1,80 @@
+.container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9996;
+    overflow-y: scroll;
+    cursor: pointer;
+    height: 100vh;
+    overflow: hidden;
+    display: block;
+}
+
+.cart-container {
+    background: rgb(255, 255, 255);
+    color: #000;
+    position: static;
+    flex-direction: column;
+    gap: 3em;
+    /* inset: 0 0 0 72%; */
+    z-index: 1000;
+    padding: 30px 30px;
+    margin: 0 0 0 70%;
+    max-width: 30%;
+    cursor: default;
+    /* text-align: center; */
+    overflow: hidden;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.15s ease-in;
+  }
+  
+.hide {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.15s ease-out;
+  } 
+  
+.icon {
+      z-index: 9997;
+      position: relative;
+      background-color: transparent;
+      border: 0;
+      font-size: 20px;
+      cursor: pointer;
+      /* padding-right: 2em; */
+  }
+  
+  .icon-light {
+    color: rgb(255, 255, 255);
+  }
+
+  .icon-dark {
+    color: rgb(0, 0, 0);
+  }
+
+  @media (max-width: 1300px) {
+
+    .cart-container {
+        padding: 30px 30px;
+        margin: 0 0 0 50%;
+        max-width: 50%;
+    }
+
+  }
+
+  @media (max-width: 800px) {
+
+    .cart-container {
+        padding: 30px 10px;
+        margin: 0 0 0 5%;
+        max-width: 95%;
+    }
+
+  }

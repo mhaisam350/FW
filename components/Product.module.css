@@ -1,0 +1,20 @@
+
+.product {
+    grid-column: 1fr;
+    position: relative;
+    /* border: 1px solid black; */
+    /* text-align: center; */
+}
+
+.product-name, .product-price {
+    font-weight: 700;
+}
+
+.image-container {
+    width: 1fr;
+    height: 600px;
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+    transition: 0.1s ease-in;
+}

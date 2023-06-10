@@ -1,0 +1,234 @@
+.container {
+    border: 1px solid black;
+}
+
+.carousel-text, .carousel-title, .carousel-subtitle {
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(10px, auto);
+    white-space: normal;
+}
+
+.carousel-text {
+    grid-column: 2 / 6;
+    grid-row: 2 / 4;
+    line-height: 1.5;
+}
+
+.carousel-title {
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.carousel-subtitle {
+    font-size: 20px; 
+}
+
+.product-container {
+    /* padding: 50px 80px; */
+    background: rgb(245, 245, 245);
+    border: 1px solid rgb(235, 235, 235);
+    border-radius: 25px;
+}
+
+/* .product-image {
+    
+} */
+
+/* .product-title {
+    text-align: center;
+    margin: 70px 0;
+    font-size: 21px;
+} */
+
+.discover-container {
+    margin: 7em 65px;
+}
+
+/* .discover-text {
+    
+} */
+
+.discover-title {
+    text-transform: uppercase;
+}
+
+.discover-paragraph {
+    max-width: 85%;
+    line-height: 1.7;
+}
+
+.discover-button {
+    margin-top: 2em;
+    padding: 0.7em 2em;
+    text-transform: uppercase;
+    background: transparent;
+    cursor: pointer;
+    border: 4px solid #000;
+    border-radius: 0.25em;
+    position: relative;
+}
+
+/* .discover-button::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(131, 131, 131);
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(3em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1em);
+} */
+
+.discover-image {
+    max-width: 100%;
+    margin-top: 4em;
+    height: 50%;
+}
+
+.categories-container {
+    margin: 150px 200px
+}
+
+.categories-subcontainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1em;
+}
+
+.category-article {
+    /* border: 1px solid #000; */
+    padding: 100px 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    color: #fff;
+}
+
+.category-content {
+    padding: 0 20px;
+}
+
+#parts-content {
+    padding: 150px 20px;
+}
+
+.category-title {
+    font-size: 1.5em;
+}
+
+.category-text {
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+.category-btn {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.parts-article {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    background-image: url('../public/category-image\ 1.jpg');
+    box-shadow:inset 0 0.125rem .25rem 2000px rgba(0, 0, 0, 0.2);
+}
+
+.apparel-article {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-image: url('../public/helmet-bike.jpg');
+    box-shadow:inset 0 0.125rem .25rem 2000px rgba(0, 0, 0, 0.4);
+}
+
+.lifestyle-article {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-image: url('../public/category-image\ 2.jpg');
+    box-shadow:inset 0 0.125rem .25rem 2000px rgba(0, 0, 0, 0.2);
+}
+
+
+@media (max-width: 1450px) {
+
+    .categories-container {
+        margin: 150px 50px
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .categories-container {
+        margin: 150px 5px
+    }
+
+    .categories-subcontainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .parts-article, .apparel-article, .lifestyle-article {
+        grid-column: 1 / 2;
+    }
+
+    .parts-article {
+        grid-row: 1 / 2;
+    }
+
+    .apparel-article {
+        grid-row: 2 / 3;
+    }
+
+    .lifestyle-article {
+        grid-row: 3 / 4;
+    }
+
+    #parts-content {
+        padding: 0px 20px;
+    }
+    
+
+}
+
+
+/* @media (min-width: 810px) {
+
+    .carousel-title {
+        font-size: 40px;
+    }
+    
+    .carousel-subtitle {
+        font-size: 25px; 
+    }
+
+    .discover-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .discover-subcontainer {
+        
+        max-width: 40%;
+    }
+
+    .discover-image {
+        margin-top: 0;
+    }
+
+} */
